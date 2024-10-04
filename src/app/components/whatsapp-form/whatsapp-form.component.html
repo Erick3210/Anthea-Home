@@ -1,0 +1,50 @@
+<section id="whatapp" class="hidden">
+  <div class="modal flex:column items:start content:start gap:4">
+    <p class="size:large">WhatsApp</p>
+    <span class="size:small"
+      >Llena el formulario para brindarte una mejor atención</span
+    >
+    <div class="form flex:column content:start gap:4">
+      <div class="flex gap:4 flex:nowrap">
+        <input
+          [(ngModel)]="templateForm.SingleLine"
+          name="SingleLine"
+          placeholder="Nombre"
+          class="style:round t:block"
+        />
+        <input
+          [(ngModel)]="templateForm.SingleLine1"
+          name="SingleLine1"
+          placeholder="Apellido"
+          class="style:round t:block"
+        />
+      </div>
+      <input
+        [(ngModel)]="templateForm.PhoneNumber1_countrycode"
+        name="PhoneNumber1_countrycode"
+        placeholder="Whatsapp"
+        class="style:round t:block"
+      />
+      <button
+        type="button"
+        (click)="submit()"
+        class="ui:button type:button theme:accent style:small-round mt:0:5"
+      >
+        Enviar whatsapp
+      </button>
+      <button
+        class="ui:button type:button theme:secondary style:small-round close"
+      >
+        Salir
+      </button>
+    </div>
+    <!-- <button class="close">Volver a Santorini</button> -->
+    <span class="footer">
+      Acepto que toda la información recabada con este formulario será tratada
+      de conformidad con el
+      <a href="https://ruba.mx/aviso-de-privacidad" target="_blank"
+        >aviso de privacidad</a
+      >.
+    </span>
+  </div>
+</section>

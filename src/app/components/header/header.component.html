@@ -1,0 +1,40 @@
+<!-- No eliminart id base-form, esado para evento del componente form-->
+<div class="base-form"></div>
+<div>
+  <div class="nav-mobile">
+    <div class="nav-mobile__icons">
+      <a href="/portal-de-las-lomas/">
+        <img data-src="assets/images/logo-form.svg" width="40" alt="Contacto Ruba">
+      </a>
+      <img id="icon-menu" (click)="showMenu()" class="menu" width="25" data-src="assets/icons/menu.svg" alt="menu">
+      <img id="icon-close" (click)="showMenu()" class="menu hiddenIcon" width="30"
+        data-src="assets/icons/close-menu.svg" alt="menu">
+    </div>
+    <div id="menu-mobile" class="nav-mobile__links hiddenIcon animate__animated gap:3 p:2" data-animate="animate__slideInDown">
+        <!-- <a href="#modelos-page" class="promo">PROMOCIONES</a> -->
+        <a href="#modelo">CONOCE CÓRDOBA</a>
+        <a href="#location">UBICACIÓN</a>
+        <a href="#" class="open-form">CONTÁCTANOS</a>
+
+    </div>
+</div>
+
+  <div class="flex justify:center layer-5 navbar">
+    <div class="flex items:center justify:between m:width-20 d:width-18">
+      <a href="/portal-de-las-lomas/">
+        <img class="logo" width="50" height="50" src="assets/images/logo_header.svg" alt="Logo Portal de las Lomas">
+      </a>
+      <div class="flex:inline items:center gap:4 links">
+        <!-- <a href="#modelos-page" class="anchor promo">PROMOCIONES</a> -->
+        <a href="#modelo">CONOCE CÓRDOBA</a>
+        <a href="#location">UBICACIÓN</a>
+      </div>
+      <div class="contact">
+        <button type="button" class="ui:button type:button theme:accent style:small-round ph:1 open-form">
+          CONTÁCTANOS
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>

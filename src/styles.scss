@@ -1,0 +1,103 @@
+:root {
+  scroll-behavior: smooth;
+  --db-base-color: #181818;
+  --db-font-face: "Poppins", sans-serif;
+  --db-title-face: "Poppins", sans-serif;
+  --db-line-height: 1.4;
+  --db-small-relative: 90%;
+  --db-height-elements: 45px;
+
+  /*
+  * Definen el porcentaje o medida en pixeles a restar del 100%
+  * de la pantalla para establecer el limite de container: .flex:container
+  */
+  --db-wrap-m: 5%;
+  --db-wrap-tb: 5%;
+  --db-wrap-l: 15%;
+  --db-wrap-d: 15%;
+  --db-wrap-hd: 15%;
+  --db-wrap-w: 25%;
+
+  //Tamaños de texto para diferentes resoluciones
+  --db-font-base: 16px;
+  --db-size-xs: 12px;
+  --db-size-sm: 14px;
+  --db-size-md: 20px;
+  --db-size-lg: 25px;
+  --db-size-tl: 40px;
+  --db-size-jb: 60px;
+  --db-size-hr: 80px;
+  --db-size-mg: 150px;
+
+  //radius
+  --db-radius-sm: 4px;
+  --db-radius-md: 12px;
+  --db-radius-lg: 18px;
+  --db-radius-fluid: 100%;
+
+  // ajustes de media queries
+  --db-breakpoint-m: 320px;
+  --db-breakpoint-tb: 768px;
+  --db-breakpoint-l: 1024px;
+  --db-breakpoint-d: 1366px;
+  --db-breakpoint-hd: 1440px;
+  --db-breakpoint-w: 1920px;
+}
+
+//Tema de los componentes CSS
+$primary: #8dab70;
+$secondary: #dac367;
+$white: #ffffff;
+$black: #000000;
+$smoke: #f6f6f6;
+$dark: #262626;
+$gray: #717d7d;
+
+//Colores de estado para elmentos input, etc.
+$state-danger: #c51533;
+$state-warning: #ffae00;
+$state-info: #157bc5;
+$state-success: #00c850;
+
+@import "dbgrid/scss/lib";
+@include create-color-palette($colors, $tones);
+
+body.overflowHide {
+  overflow: hidden !important;
+}
+
+img {
+  opacity: 0;
+  transition: opacity 300ms linear;
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+.ui\:button {
+  width: 100%;
+
+  &.theme\:accent {
+    background-color: var(--db-primary) !important;
+    color: var(--db-white);
+  }
+  &.theme\:secondary {
+    background-color: var(--db-smoke);
+    color: #2c4b38;
+  }
+
+  &.theme\:secondary:hover {
+    color: white;
+  }
+
+  &.theme\:altern {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    color: var(--db-white);
+  }
+
+  &.theme\:form {
+    background-color: #dac367;
+    color: var(--db-white);
+  }
+}

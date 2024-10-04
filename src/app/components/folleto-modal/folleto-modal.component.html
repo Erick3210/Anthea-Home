@@ -1,0 +1,34 @@
+<div id="folleto" class="">
+  <div class="form">
+    <input
+      [(ngModel)]="templateForm.SingleLine"
+      name="name"
+      placeholder="Nombre"
+      class="p:1 mv:1 style:round t:block"
+    />
+    <input
+      [(ngModel)]="templateForm.SingleLine1"
+      name="firstName"
+      placeholder="Apellido"
+      class="p:1 mv:1 style:round t:block"
+    />
+    <input
+      [(ngModel)]="templateForm.PhoneNumber1_countrycode"
+      name="phone"
+      placeholder="Celular"
+      class="p:1 mv:1 style:round t:block"
+    />
+    <button
+      type="button"
+      (click)="submit()"
+      class="ui:button type:button theme:secondary style:small-round ph:1"
+      style="
+        border-radius: var(--db-radius-md);
+        font-family: var(--font-family-main-strong);
+        max-width: 250px;
+      "
+    >
+      DESCARGAR FOLLETO
+    </button>
+  </div>
+</div>

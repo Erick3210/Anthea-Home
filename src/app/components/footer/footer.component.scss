@@ -1,0 +1,107 @@
+@import "dbgrid/scss/lib";
+
+.footer {
+  color: white;
+  background-color: #2C4B38;
+  font-family: var(--font-family-title);
+  padding-top: 4rem;
+
+  &__links{
+    @media screen and (max-width: 1024px) {
+      --flex-direction: column;
+      width: 100%;
+      align-items: start;
+      gap:unset;
+      &-item1{
+        align-items: flex-start;
+        margin-bottom: 20px;
+        text-align: center;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          & p{
+            text-align: center;
+          }
+        }
+      }
+      @media screen and (max-width: 768px) {
+          padding: 20px;
+      }
+    }
+  }
+}
+
+.networksFooter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 157px;
+  height: 46px;
+  padding-inline: 20px;
+  background-color: rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+
+  @media screen and (max-width: 768px) {
+  text-align: center;
+  padding: 20px;
+
+}
+
+}
+
+.digital-booting{
+  font-family: var(--font-family-main);
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+.net{
+  margin-left: 2.5rem;
+  @media screen and (max-width: 1024px) {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   margin-left: unset;
+  }
+  @media screen and (max-width: 768px) {
+   padding: 20px;
+  }
+}
+
+.logos{
+  display: flex;
+  @media screen and (max-width: 1024px) {
+    width: 28%;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 30px;
+    @media screen and (max-width: 768px) {
+      width:100%;
+      justify-content: space-around;
+     }
+   }
+  & img{
+    margin-left: 40px;
+    @media screen and (max-width: 1024px) {
+      margin-left: unset;
+     }
+  }
+}
+
+.imgLocation{
+  @media screen and (max-width: 1024px) {
+    display: none;
+   }
+}
+
+.ubicacion{
+  padding-left: 50px;
+  @media screen and (max-width: 1024px) {
+    padding-left: unset;
+   }
+}
+
+img{
+  opacity: unset;
+}
