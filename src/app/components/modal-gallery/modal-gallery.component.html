@@ -29,7 +29,16 @@
           class="gallery-slider flex flex:nowrap items:center justify:start"
           fix
         >
-          <!-- render here images gallery -->
+          <!-- Imágenes estáticas dentro del HTML -->
+          <picture data-index="0" style="display:flex;align-items:center;justify-content:center;width:100%;height:calc(100vh - 100px);">
+            <img loading="lazy" class="loaded" src="assets/images/1.png" style="object-fit: contain;width: 95%;height: 95%;border-radius: 20px;" alt="Imagen 1">
+          </picture>
+          <picture data-index="1" style="display:flex;align-items:center;justify-content:center;width:100%;height:calc(100vh - 100px);">
+            <img loading="lazy" class="loaded" src="assets/images/2.png" style="object-fit: contain;width: 95%;height: 95%;border-radius: 20px;" alt="Imagen 2">
+          </picture>
+          <picture data-index="2" style="display:flex;align-items:center;justify-content:center;width:100%;height:calc(100vh - 100px);">
+            <img loading="lazy" class="loaded" src="assets/images/3.png" style="object-fit: contain;width: 95%;height: 95%;border-radius: 20px;" alt="Imagen 3">
+          </picture>
         </div>
       </div>
     </div>
@@ -43,13 +52,10 @@
   <div class="flex p:2 mobileAreabutton">
     <div class="flex justify:center gap:4">
       <button class="iconButton" (click)="forward()">
-        <img
-          data-src="assets/icons/arror.svg"
-          alt="imagen anterior"
-        />
+        <img src="assets/icons/arror.svg" alt="imagen siguiente" />
       </button>
       <button class="iconButton" (click)="back()">
-        <img data-src="assets/icons/arrol.svg" alt="imagen anterior" />
+        <img src="assets/icons/arrol.svg" alt="imagen anterior" />
       </button>
     </div>
   </div>

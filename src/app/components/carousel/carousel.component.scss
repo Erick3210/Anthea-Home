@@ -1,0 +1,84 @@
+.carousel {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* Alineación vertical centrada */
+  flex-direction: column;
+  width: 90%;
+  max-width: 1200px; /* Limitar el ancho máximo para pantallas grandes */
+
+  /* Aquí puedes agregar el borde */
+  border: 2px solid #00394a; /* Elige el grosor, estilo y color del borde */
+  border-radius: 10px; /* Si quieres bordes redondeados, agrega esta propiedad */
+  
+  /* Ajustes para dispositivos móviles */
+  @media screen and (max-width: 768px) {
+    width: 100%; /* Para pantallas más pequeñas, ocupar el 100% del ancho */
+  }
+
+  &__control {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: -40px; /* Ajustar el margen en relación al control */
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    bottom: 10px; /* Colocar los controles cerca de la parte inferior */
+  }
+
+  &__control button {
+    background-color: #00394a6f;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+  }
+
+  &__control button:hover {
+    background-color: #f0f0f0;
+  }
+
+  &__slider-images {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ajuste inicial para pantallas pequeñas */
+    overflow: hidden; /* Para evitar que imágenes salgan del contenedor */
+
+    @media screen and (min-width: 300px) {
+      height: 300px; /* Ajuste para pantallas medianas */
+    }
+
+    @media screen and (min-width: 1024px) {
+      height: 500px; /* Ajuste para pantallas grandes */
+    }
+
+    @media screen and (min-width: 1440px) {
+      height: 500px; /* Ajuste para pantallas muy grandes */
+    }
+  }
+
+  &__slider-images img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s ease-in-out; /* Reducido el tiempo de transición */
+  }
+
+  &__slider-images img.active {
+    opacity: 1;
+    position: relative;
+  }
+}
+
+  
+  
+  
+  

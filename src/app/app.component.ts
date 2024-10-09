@@ -5,6 +5,7 @@ import {
   CUSTOM_ELEMENTS_SCHEMA,
 } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';  // Importa CommonModule para utilizar *ngIf
 
 import { FormComponent } from './components/form/form.component';
 import { PopupComponent } from './components/popup/popup.component';
@@ -12,11 +13,14 @@ import { PromoModalComponent } from './components/promo-modal/promo-modal.compon
 import { ModalGalleryComponent } from './components/modal-gallery/modal-gallery.component';
 import { FolletoModalComponent } from './components/folleto-modal/folleto-modal.component';
 import { WhatsappFormComponent } from './components/whatsapp-form/whatsapp-form.component';
+import { SecondPopupComponent } from './components/second-popup/second-popup.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    CommonModule, // Importa CommonModule para *ngIf y otras directivas comunes
     RouterOutlet,
     FormComponent,
     PopupComponent,
@@ -24,6 +28,7 @@ import { WhatsappFormComponent } from './components/whatsapp-form/whatsapp-form.
     ModalGalleryComponent,
     FolletoModalComponent,
     WhatsappFormComponent,
+    SecondPopupComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -31,6 +36,9 @@ import { WhatsappFormComponent } from './components/whatsapp-form/whatsapp-form.
 })
 export class AppComponent implements AfterViewInit, AfterContentChecked {
   private observer: IntersectionObserver | null = null;
+
+  isFirstPopupVisible: boolean = true;  // El primer popup se muestra por defecto
+  isSecondPopupVisible: boolean = false; // El segundo popup está oculto por defecto
 
   constructor(private router: Router) {}
 
@@ -133,4 +141,18 @@ export class AppComponent implements AfterViewInit, AfterContentChecked {
       document.querySelectorAll('[data-animate]').forEach((el) => this.observer!.observe(el));
     }
   }
+
+    // Método para abrir el segundo popup
+    openSecondPopup() {
+      this.isFirstPopupVisible = false; // Ocultar el primer popup
+      this.isSecondPopupVisible = true; // Mostrar el segundo popup
+      console.log('Segundo popup abierto');  // Verificar que este mensaje aparezca
+    }
+  
+    // Método para cerrar el segundo popup
+    closeSecondPopup() {
+      this.isSecondPopupVisible = false; // Ocultar el segundo popup
+    }
+  
+  
 }

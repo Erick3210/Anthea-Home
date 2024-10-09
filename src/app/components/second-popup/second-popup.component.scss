@@ -1,0 +1,102 @@
+@import "dbgrid/scss/lib";
+
+.second-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  backdrop-filter: blur(5px); /* Aplica el desenfoque al fondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.second-popup.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0);
+}
+
+.second-popup__outer-container {
+  background-color: #003b73;
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 850px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.second-popup__content {
+  background-color: #ffffff;
+  border-radius: 15px;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: 0 6px 40px -16px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow-y: auto;
+  flex-grow: 1;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.custom-button-container {
+  position: sticky;
+  bottom: 0;
+  background-color: #ffffff;
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  margin-bottom: 0;
+}
+
+.custom-button {
+  background-color: #f3654b;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #ff7f61;
+}
+
+/* Botón de cierre en la esquina superior derecha */
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #f00;
+}
+
+/* Footer con logos */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.footer-content img {
+  max-height: 50px;
+  margin: 0 20px;
+  display: block;
+  object-fit: contain;
+}

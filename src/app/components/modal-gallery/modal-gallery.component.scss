@@ -110,7 +110,6 @@
 #uiGallery .galleryGrid {
   display: grid;
   width: 100%;
-
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   align-items: center;
@@ -152,10 +151,23 @@
 }
 
 #uiGallery .gallery-slider {
-  transition: all 400ms ease-out;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: margin-left 400ms ease-out;
+  width: 100%;
+}
+
+#uiGallery .gallery-slider picture {
+  flex: 0 0 100%; /* Cada imagen ocupará el 100% del ancho del slider */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #uiGallery .gallery-slider img {
+  width: 95%;  /* La imagen debe ocupar el 95% del espacio disponible */
+  height: 95%; 
+  border-radius: 20px;
   transition: all 400ms ease;
   cursor: zoom-in;
 }

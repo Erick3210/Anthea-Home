@@ -1,0 +1,46 @@
+<div class="second-popup">
+    <div class="second-popup__outer-container">
+      <!-- Contenedor blanco (contenido principal) -->
+      <div class="second-popup__content">
+        <!-- Botón para cerrar el popup -->
+        <button class="close-btn" aria-label="Cerrar" (click)="onClose()">&times;</button>
+  
+        <!-- Título del aviso -->
+        <h2>AVISO DE PRIVACIDAD</h2>
+  
+        <!-- Contenido del aviso de privacidad -->
+        <p>
+          Real de las Torres Desarrollos, S.A. de C.V. (en lo sucesivo “RTD”) con domicilio convencional ubicado en Paseo Triunfo de la República 215-1, Cd Juárez, Chihuahua, es el responsable del uso y protección de sus datos personales, y al respecto le informamos lo siguiente:
+        </p>
+        <h3>¿PARA QUÉ FINES UTILIZAREMOS SUS DATOS PERSONALES?</h3>
+        <p>Los datos personales que recabamos de Usted, los utilizaremos para actividades orientadas con el objeto de RTD, como son:</p>
+        <ol>
+          <li>Conformar una base de datos con fines estadísticos, que nos permitan determinar cantidad de personas afines o comprometidas con los fines de RTD;</li>
+          <li>Convocarle a eventos y/o actividades que realiza RTD con motivo del impulso a la concientización colectiva que promueve;</li>
+          <li>Recabar datos personales para el llenado de formularios, así como de contacto que únicamente serán utilizados para fines estadísticos, así como para responder a sus inquietudes en lo particular;</li>
+          <li>La información proporcionada sólo podrá ser utilizada para fines estadísticos que se elaboren para el seguimiento de avances y/o reportes por parte de RTD.</li>
+        </ol>
+        <p>
+          El uso de cualquiera de las herramientas, aplicaciones o medios de contacto contenidos en nuestra página web será considerado como el otorgamiento tácito del consentimiento para el uso de la información que nos comparta.
+        </p>
+  
+        <!-- Botón para aceptar -->
+        <div class="custom-button-container">
+          <button
+            class="custom-button"
+            aria-label="Aceptar aviso de privacidad"
+            (click)="onClose()"
+          >
+            Aceptar aviso de privacidad
+          </button>
+        </div>
+      </div>
+  
+      <!-- Información adicional del footer (imágenes fuera del contenedor blanco) -->
+      <div class="footer-content">
+        <img src="/assets/images/Ruba.png" alt="Logo Ruba" />
+        <img src="/assets/images/UG.png" alt="Logo UG" />
+      </div>
+    </div>
+  </div>
+  

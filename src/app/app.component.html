@@ -2,7 +2,14 @@
 
 <!-- core del template -->
 <app-promo-modal></app-promo-modal>
-<app-popup></app-popup>
+
+<!-- Mostrar el primer popup solo si isFirstPopupVisible es true -->
+<app-popup *ngIf="isFirstPopupVisible"></app-popup>
+
+<!-- Mostrar el segundo popup solo si isSecondPopupVisible es true -->
+<app-second-popup *ngIf="isSecondPopupVisible"></app-second-popup>
+
+
 <app-whatsapp-form></app-whatsapp-form>
 <app-form></app-form>
 <app-modal-gallery></app-modal-gallery>

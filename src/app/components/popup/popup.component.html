@@ -6,21 +6,18 @@
   >
     <p class="pt:2 t:center">
       Hubo una actualización en el aviso de privacidad,
-      <a
-        href="https://ruba.mx/aviso-de-privacidad"
-        target="_blank"
-        class="color:primary"
-        >haz clic aquí</a
-      >
+      <a href="" (click)="openSecondPopup($event)">
+        Ir al Second Popup
+      </a>
       para enterarte.
     </p>
 
     <div class="flex:center mt:2 ph:1">
       <button
-        id="closePop"
-        class="ui:button type:button theme:accent style:small-round"
-        aria-label="Ver mas detalles"
-        (click)="onClose()"
+      id="closePop"
+      class="custom-button ui:button type:button style:small-round"
+      aria-label="Ver más detalles"
+      (click)="onClose()"
       >
         Aceptar aviso de privacidad
       </button>

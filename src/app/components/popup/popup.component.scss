@@ -33,13 +33,23 @@
   }
 }
 
-.theme {
-  &\:accent {
-    background-color: var(--db-primary, black);
-    color: var(--db-white, #fff);
-  }
+.custom-button {
+  background-color: #003d05; /* Cambia este valor por el color que desees */
+  color: white; /* Cambia este valor por el color del texto que prefieras */
+  border: none; /* Remueve el borde si quieres un estilo más limpio */
+  padding: 0.75rem 1.5rem; /* Opcional: ajustar el tamaño del botón */
+  border-radius: 5px; /* Opcional: redondear las esquinas */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.custom-button:hover {
+  background-color: #45a049; /* Cambia el color cuando el usuario pase el ratón sobre el botón */
+}
+
 
 a {
   color: var(--db-primary);
 }
+
+
