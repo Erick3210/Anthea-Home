@@ -3,12 +3,21 @@
 .navbar {
   padding: 0.1rem 2rem;
   background-color: #5b5b5b;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-
+  position: fixed; /* Fija la cabecera en la parte superior */
+  top: 0;
+  width: 100%; /* La cabecera ocupa todo el ancho de la ventana */
+  z-index: 1000; /* Para que esté sobre otros elementos */
+  transition: background-color 0.3s ease-in-out;
 }
+
+.navbar.scrolled {
+  background-color: #3f06e8; /* Cambia de color al hacer scroll */
+}
+
+body {
+  padding-top: 80px; /* Añade relleno al cuerpo para evitar que el contenido quede bajo la cabecera */
+}
+
 
 .logo {
   opacity: unset;
@@ -27,6 +36,7 @@
 
 .nav-mobile {
   display: none;
+  
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;

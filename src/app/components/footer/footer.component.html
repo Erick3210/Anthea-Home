@@ -1,98 +1,106 @@
 <div class="flex footer base-form">
   <div class="flex items:start justify:around width-18 gap:4 footer__links">
-    <div class="flex:column width-8 footer__links-item1">
-      <a href="/" class="size:large">
+    <div class="flex-column width-8 footer__links-item1">
+      <a href="/" class="size-large">
         <img
           class="logo"
-          width="415px"
-          height="108px"
+          width="415"
+          height="108"
           data-src="assets/images/LOGO.png"
           alt="Logo Portal de las Lomas"
+          loading="lazy"
         />
+        <p>Tu nuevo hogar en el espacio que necesitas</p>
       </a>
-      <p>Tu nuevo hogar en el espacio que necesitas</p>
+     
     </div>
-    <div class="flex:column width-4 gap:4 mt:1 footer__links-item1">
+    <div class="flex-column width-4 gap-4 mt-1 footer__links-item1">
       <a href="#" class="width-20">INICIO</a>
       <a href="#" class="width-20">PROMOCIONES</a>
       <a href="#modelo" class="width-20">MODELO CÓRDOBA</a>
       <a href="https://ruba.mx/ruba-casa" target="_blank" class="width-20">SOBRE NOSOTROS</a>
     </div>
-    <div class="flex:column width-5 mt:1 gap:4 footer__links-item1">
+    <div class="flex-column width-5 mt-1 gap-4 footer__links-item1">
       <a
         href="https://www.google.com/maps?ll=25.362398,-100.99769&z=17&t=m&hl=es-419&gl=MX&mapclient=embed&cid=3060125132956402659"
         target="_blank"
         class="ubicacion width-20"
-        >UBICACIÓN</a
-      >
-      <div class="flex:inline justify:center gap:4">
+      >UBICACIÓN</a>
+      <div class="flex justify-center gap-4">
         <img
           class="imgLocation"
-          width="28px"
-          height="28px"
-          data-src="assets/icons/location.svg"
+          width="28"
+          height="28"
+          src="assets/icons/location.svg"
           alt="Location"
+          loading="lazy"
         />
         <a
           href="https://www.google.com/maps?ll=25.362398,-100.99769&z=17&t=m&hl=es-419&gl=MX&mapclient=embed&cid=3060125132956402659"
           target="_blank"
           class="width-20"
         >
-          Blvd. Militar, Portal de las Lomas, Lomas del Sur, 25094 Saltillo,
-          Coah.</a
-        >
+          Blvd. Militar, Portal de las Lomas, Lomas del Sur, 25094 Saltillo, Coah.
+        </a>
       </div>
-      <div class="net">
-        <div class="networksFooter">
+      <div class="networksFooter">
+        <img
+          class="header__image-icon whatappForm"
+          data-src="assets/icons/whatsapp-white.svg"
+          alt="whatsapp"
+          loading="lazy"
+        />
+        <a href="https://www.facebook.com/RubaSaltillo" target="_blank">
           <img
-            class="header__image-icon whatappForm"
-            data-src="assets/icons/whatsapp-white.svg"
-            alt="whatsapp"
+            class="header__image-icon"
+            data-src="assets/icons/facebook-white.svg"
+            alt="facebook"
+            loading="lazy"
           />
-          <a href="https://www.facebook.com/RubaSaltillo" target="_blank">
-            <img
-              class="header__image-icon"
-              data-src="assets/icons/facebook-white.svg"
-              alt="facebook"
-            />
-          </a>
-          <a href="https://www.instagram.com/ruba.saltillo/" target="_blank">
-            <img
-              class="header__image-icon"
-              data-src="assets/icons/instagram-white.svg"
-              alt="instagram"
-            />
-          </a>
-        </div>
+        </a>
+        <a href="https://www.instagram.com/ruba.saltillo/" target="_blank">
+          <img
+            class="header__image-icon"
+            data-src="assets/icons/instagram-white.svg"
+            alt="instagram"
+            loading="lazy"
+          />
+        </a>
       </div>
     </div>
   </div>
-    <div class="logos mv:3 width-18">
-      <img class="" data-src="assets/images/ruba-footer.svg" alt="ruba" />
-      <img class="" data-src="assets/images/44-anios.svg" alt="44 años" />
-    </div>
-  <div class="width-18 net">
-    <div class="flex:column">
-      <div class="flex justify:center gap:4">
-        <a href="https://ruba.mx/aviso-de-privacidad" target="_blank"
-          >AVISO DE PRIVACIDAD</a
-        >
-        <a href="https://ruba.mx/terminos-y-condiciones" target="_blank"
-          >TÉRMINOS Y CONDICIONES</a
-        >
-        <a href="https://ruba.mx/contratos-de-adhesion" target="_blank"
-          >CONTRATOS DE ADHESIÓN</a
-        >
-      </div>
-      <a
-        href="https://digitalbooting.com/"
-        target="_blank"
-        class="t:center mb:4 digital-booting"
-        >Sitio web Diseñado y Desarrollado por Digital Booting | Agencia
-        Creativa de Marketing Digital</a
-      >
-    </div>
+
+  <!-- Aquí añadimos el iframe para el mapa -->
+  <div class="map-container" style="max-width: 100%; margin: 20px auto;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.264380175443!2d-100.99760359999999!3d25.362454399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86887346ac6e092b%3A0xa3be23a840c84d9c!2sBlvd.%20Militar%2C%2025094%20Saltillo%2C%20Coah.!5e0!3m2!1ses!2smx!4v1728531433713!5m2!1ses!2smx"
+      width="100%"
+      height="300"
+      style="border: 0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </div>
+
+  <div class="logos mv-3 width-18" style="display: flex; justify-content: center; align-items: center; gap: 2rem; margin: 2rem auto;">
+    <img class="" data-src="assets/images/ruba-footer.svg" alt="ruba" loading="lazy" />
+    <img class="" data-src="assets/images/44-anios.svg" alt="44 años" loading="lazy" />
+  </div>
+  
+  <div class="width-18 net" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem;">
+    <div class="flex justify-center gap-1" style="display: flex; justify-content: center; gap: 1rem; text-align: center;">
+      <a href="https://ruba.mx/aviso-de-privacidad" target="_blank">AVISO DE PRIVACIDAD</a>
+      <a href="https://ruba.mx/terminos-y-condiciones" target="_blank">TÉRMINOS Y CONDICIONES</a>
+      <a href="https://ruba.mx/contratos-de-adhesion" target="_blank">CONTRATOS DE ADHESIÓN</a>
+    </div>
+    
+    <a
+      href="https://digitalbooting.com/"
+      target="_blank"
+      class="t-center mb-4 digital-booting"
+      style="text-align: center; margin-top: 1rem;"
+    >Sitio web Diseñado y Desarrollado por Digital Booting | Agencia Creativa de Marketing Digital</a>
+  </div>
+  
 </div>
-<!-- No eliminar el id base-form, es usado para evento del componente form-->
-<div class="base-form"></div>
