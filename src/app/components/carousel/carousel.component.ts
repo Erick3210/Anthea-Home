@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss'], // Cambia styleUrl a styleUrls
+  styleUrls: ['./carousel.component.scss'],
 })
 export class CarouselComponent {
   images = [
@@ -29,6 +29,7 @@ export class CarouselComponent {
     }
   }
 
+  // Función para el auto deslizamiento
   startAutoSlide() {
     this.intervalId = setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
@@ -41,12 +42,24 @@ export class CarouselComponent {
     this.startAutoSlide();
   }
 
-    // Nuevo método para abrir la galería
-    openGallery() {
-      // Aquí llamas a la función que abre el modal de la galería
-      const galleryElement = document.getElementById('uiGallery');
-      if (galleryElement) {
-        galleryElement.classList.add('show'); // Muestra la galería
-      }
+  // Método para avanzar a la siguiente imagen
+  forward() {
+    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+    clearInterval(this.intervalId);
+    this.startAutoSlide();
+  }
+
+  // Método para retroceder a la imagen anterior
+  backward() {
+    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+    clearInterval(this.intervalId);
+    this.startAutoSlide();
+  }
+
+  openGallery() {
+    const galleryElement = document.getElementById('uiGallery');
+    if (galleryElement) {
+      galleryElement.classList.add('show');
     }
+  }
 }

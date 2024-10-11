@@ -1,10 +1,20 @@
 <div class="carousel">
-    <div class="carousel__slider-images" (click)="openGallery()">
-      <img *ngFor="let img of images; let i = index" [src]="img" [ngClass]="{'active': currentIndex === i}">
-    
-      <div class="carousel__control">
-        <button *ngFor="let img of images; let i = index" (click)="showImage(i)" [style.background-color]="currentIndex === i ? '#ffffff' : '#ffffff7a'"></button>
-      </div>
-    </div>
+  <div class="carousel__slider-images" (click)="openGallery()">
+    <img *ngFor="let img of images; let i = index" [src]="img" [ngClass]="{'active': currentIndex === i}">
   </div>
-  <br>
+
+  <!-- Botón de flecha hacia la izquierda (anterior) -->
+  <div class="carousel__button carousel__button--prev">
+    <button (click)="backward()">
+      <img data-src="assets/images/Anteriror.svg" alt="imagen anterior" />
+    </button>
+  </div>
+
+  <!-- Botón de flecha hacia la derecha (siguiente) -->
+  <div class="carousel__button carousel__button--next">
+    <button (click)="forward()" >
+      <img data-src="assets/images/Siguiente.svg" alt="Flecha siguiente" >
+    </button>
+  </div>
+  
+</div>

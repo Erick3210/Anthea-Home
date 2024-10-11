@@ -1,23 +1,43 @@
-<app-header></app-header>
+<app-header style="position: fixed;  z-index: 3 ;"></app-header>
 
 <!-- Contenedor principal para la primera sección -->
-<div class="flex-wrapper" style="background-image: url('/assets/images/FONDO.png'); background-size: cover; background-position: center; background-attachment: fixed; min-height: 100vh;">
+<div class="flex-wrapper" style="background-image: url('/assets/images/FONDO.jpg'); background-size: cover; background-position: center; background-attachment: fixed; min-height: 100vh;">
   <div class="flex-column flex-center" style="min-height: 80vh;">
     
-    <!-- Añadir el contenedor del texto con fondo transparente -->
-    <div class="text-container">
-      <h2>Tu nuevo estilo de vida empieza aquí: <span class="highlight">Anthea Departamentos en renta.</span></h2>
-      
-      <!-- Iconos de redes sociales -->
-      <div class="social-icons">
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-      </div>
-    </div>
-
+<!-- Añadir el contenedor del texto con fondo transparente -->
+<div class="text-container">
+  <h2>Tu nuevo estilo de vida empieza aquí: <span class="highlight">Anthea Departamentos</span> en renta.</h2>
+  
+  <!-- Iconos de redes sociales -->
+  <div class="social-icons">
+   
+    <a href="#">
+      <img data-src="assets/images/WhatsappLogo.svg" width="40" alt="Contacto Ruba">
+    </a>
+    <a href="#">
+      <img data-src="assets/images/InstagramLogo.svg" width="40" alt="Contacto Ruba">
+    </a>
+    <a href="#">
+      <img data-src="assets/images/FacebookLogo.svg" width="40" alt="Contacto Ruba">
+    </a>
+    
   </div>
 </div>
+
+     
+    <div class="logos mv-3 width-18" style="display: flex; justify-content: center; align-items: center; gap: 2rem; position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%);">
+      <img class="" data-src="assets/images/RUBA.svg" alt="ruba" loading="lazy" />
+      <img class="" data-src="assets/images/UG.svg" alt="44 años" loading="lazy" />
+    </div>
+
+    <!-- Añadir el texto pequeño debajo de los logos -->
+    <p style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); font-size: 10px; color: #ffffff; margin-top: 11px;">
+      Imagen con fines ilustrativos, puede variar sin previo aviso. Los renders no están a escala.
+    </p>
+    
+  </div>
+</div>
+
 
 
 <div class="flex-wrapper2">

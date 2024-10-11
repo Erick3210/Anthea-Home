@@ -29,39 +29,49 @@ $breakpoint-sm: 768px;
   background-color: transparent; /* Fondo completamente transparente */
   border-radius: 0; /* Sin bordes redondeados */
   box-shadow: none; /* Sin sombras */
-  z-index: 10; /* Asegura que esté por encima de otros elementos */
+  z-index: 1; /* Asegura que esté por encima de otros elementos */
 
   h2 {
     font-size: 2.5rem;
     font-weight: 300;
     line-height: 1.2;
     color: #ffffff; /* Color del texto principal */
+    font-style: italic; /* Aplica el estilo de letra itálica */
 
     .highlight {
       color: #d84a4a; /* Color rojo para el texto destacado */
       font-weight: 600;
+      font-style: italic; /* Aplica el estilo itálico también al texto destacado */
     }
   }
 
   /* Iconos de redes sociales */
   .social-icons {
-    margin-top: 15px;
-
+    display: flex;
+    gap: 1rem; /* Espacio entre los íconos */
+    margin-top: 20px;
+  
     a {
-      color: #333;
-      font-size: 1.8rem;
-      margin-right: 10px;
-      text-decoration: none;
-
+      display: inline-block;
+      transition: transform 0.3s ease; /* Añadir una pequeña animación en hover */
+  
       &:hover {
-        color: #d84a4a; /* Cambia de color al pasar el cursor */
+        transform: scale(1.1); /* Ampliar ligeramente el ícono cuando se pase el ratón por encima */
+      }
+  
+      .social-icon {
+        width: 40px; /* Ajusta el tamaño de los íconos */
+        height: auto;
+        
       }
     }
   }
+  
 
   @media screen and (max-width: $breakpoint-md) {
     max-width: 100%; /* Ajuste para pantallas medianas */
     padding: 10px;
+
     h2 {
       font-size: 2rem;
     }
@@ -69,11 +79,13 @@ $breakpoint-sm: 768px;
 
   @media screen and (max-width: $breakpoint-sm) {
     max-width: 90%; /* Ajuste para pantallas pequeñas */
+    
     h2 {
       font-size: 1.8rem;
     }
   }
 }
+
 
 /* Ajustes responsivos en el segundo wrapper */
 .flex-wrapper2 {
@@ -85,7 +97,7 @@ $breakpoint-sm: 768px;
 
   /* Fondo dividido en dos mitades con gradiente */
   background: 
-    linear-gradient(white 50%, rgb(0, 0, 124) 50%);
+    linear-gradient(white 60%, rgb(0, 0, 124) 50%);
 
   @media screen and (max-width: $breakpoint-sm) {
     height: auto; /* Permite que se ajuste a contenido en pantallas pequeñas */
