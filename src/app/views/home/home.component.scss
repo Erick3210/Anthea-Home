@@ -92,12 +92,12 @@ $breakpoint-sm: 768px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  height: 100%; /* Ocupa toda la altura de la pantalla */
   position: relative;
 
   /* Fondo dividido en dos mitades con gradiente */
   background: 
-    linear-gradient(white 60%, rgb(0, 0, 124) 50%);
+    linear-gradient(white 50%, rgb(0, 0, 124) 50%);
 
   @media screen and (max-width: $breakpoint-sm) {
     height: auto; /* Permite que se ajuste a contenido en pantallas pequeñas */
@@ -123,6 +123,7 @@ $breakpoint-sm: 768px;
   text-align: center;
   max-width: 60%;
   margin: 0 auto 30px;
+  font-style: italic;
 
   @media screen and (max-width: $breakpoint-md) {
     font-size: 3rem; /* Ajuste de tamaño de fuente para pantallas medianas */
@@ -173,5 +174,175 @@ app-carousel {
 
   @media screen and (max-width: $breakpoint-sm) {
     padding: 0.5rem;
+  }
+}
+
+.size-hero2 {
+  font-size: 2vw; /* Tamaño de fuente basado en el ancho de la ventana */
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto 30px;
+  font-style: italic;
+
+  @media screen and (max-width: $breakpoint-md) {
+    font-size: 3rem; /* Ajuste de tamaño de fuente para pantallas medianas */
+  }
+
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: 2rem; /* Ajuste de tamaño de fuente para pantallas pequeñas */
+  }
+
+  /* Colores para las palabras clave */
+  .highlight {
+    font-weight: 500;
+    color: #f28b4b; /* Color naranja */
+  }
+
+  .brand {
+    font-weight: 600;
+    color: #d84a4a; /* Color rojo */
+  }
+}
+
+
+
+
+
+
+
+.amenities-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre los íconos */
+  margin-top: 30px;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    flex-wrap: wrap; /* Permite que los íconos se reorganicen en pantallas pequeñas */
+  }
+
+  .amenity-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #00107e; /* Fondo oscuro para los cuadritos */
+    border-radius: 10px;
+    padding: 20px;
+    width: 150px; /* Ajusta el tamaño de los cuadritos */
+    height: 150px;
+    text-align: center;
+    color: #ffffff; /* Texto en blanco */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra para los íconos */
+    transition: transform 0.3s ease;
+
+    img {
+      width: 50px; /* Ajusta el tamaño de los íconos */
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    &:hover {
+      transform: translateY(-5px); /* Efecto hover */
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.flex-wrapper3 {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; /* Asegura que los contenedores se distribuyan correctamente */
+  align-items: center;
+  height: 110vh; /* Toda la altura de la pantalla */
+  padding: 10px;
+  border: solid black 10px;
+  background-color: #f9f9f9;
+}
+/* Contenedor Superior */
+.container {
+  display: flex;
+  flex-direction: row; /* Alinea en columna por defecto */
+  justify-content: space-between; /* Separa el contenido superior e inferior */
+  width: 100%;
+  height: 100%;
+}
+
+/* División de la parte superior en dos columnas */
+.container-left, .container-right {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+/* Estilo para el contenedor izquierdo */
+.container-left {
+  background-color: #ffffff;
+}
+
+/* Estilo para el contenedor derecho */
+.container-right {
+  background-color: #f28b4b;
+}
+
+
+
+
+
+
+
+/* Contenedor inferior */
+.containerDown{
+
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 30%;
+}
+
+/* Contenedor inferior */
+.container-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #001f3f;
+  padding: 40px;
+  text-align: center;
+  color: white;
+  width: 100%; /* Ocupa todo el ancho */
+  flex-direction: row; /* Se asegura de que los elementos sean horizontales */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container-left, .container-right {
+    width: 100%;
+  }
+
+  .container-bottom {
+    flex-direction: row; /* En pantallas pequeñas, haz que el contenedor sea vertical */
   }
 }
